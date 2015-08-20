@@ -1,0 +1,18 @@
+defaults: &defaults
+  app:
+    title: Browet
+
+development:
+  <<: *defaults
+
+
+test:
+  <<: *defaults
+
+
+production:
+  <<: *defaults
+
+
+staging:
+  <<: *defaults
