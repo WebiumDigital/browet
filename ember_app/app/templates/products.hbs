@@ -1,0 +1,9 @@
+Products here
+<table>
+  {{#each model as |product|}}
+    <tr>
+      <td>{{product.title}}</td>
+    </tr>
+  {{/each}}
+</table>
+{{page-numbers content=model}}

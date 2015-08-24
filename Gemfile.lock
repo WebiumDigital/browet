@@ -35,10 +35,6 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    active-model-adapter-source (1.13.6)
-      ember-data-source (>= 1.13, < 3.0)
-    active_model_serializers (0.9.3)
-      activemodel (>= 3.2)
     activejob (4.2.3)
       activesupport (= 4.2.3)
       globalid (>= 0.3.0)
@@ -57,9 +53,10 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.3)
     awesome_print (1.6.1)
-    barber (0.9.2)
-      ember-source (>= 1.0, < 3)
-      execjs (>= 1.2, < 3)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
     bcrypt (3.1.10)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -99,6 +96,8 @@ GEM
       tilt (>= 1.4, < 3)
       uber (~> 0.0.9)
     coderay (1.1.0)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -109,6 +108,8 @@ GEM
     colorize (0.7.7)
     daemons (1.2.3)
     debug_inspector (0.0.2)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
     devise (3.5.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -117,25 +118,39 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
-    ember-data-source (1.13.9)
-      ember-source (>= 1.8, < 3.0)
-    ember-handlebars-template (0.4.1)
-      barber (>= 0.9.0)
-      sprockets (>= 3.3, < 3.4)
-    ember-rails (0.19.1)
-      active-model-adapter-source (>= 1.13.0)
-      active_model_serializers
-      ember-data-source (>= 1.13.0)
-      ember-handlebars-template (>= 0.1.1, < 1.0)
-      ember-source (>= 1.8.0)
-      jquery-rails (>= 1.0.17)
-      railties (>= 3.1)
-    ember-source (2.0.0)
+    ember-cli-rails (0.3.5)
+      railties (>= 3.1, < 5)
+      sprockets (>= 2.0)
+    equalizer (0.0.11)
     erubis (2.7.0)
     eventmachine (1.0.5)
     execjs (2.6.0)
+    faker (1.5.0)
+      i18n (~> 0.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    grape (0.13.0)
+      activesupport
+      builder
+      hashie (>= 2.1.0)
+      multi_json (>= 1.3.2)
+      multi_xml (>= 0.5.2)
+      rack (>= 1.3.0)
+      rack-accept
+      rack-mount
+      virtus (>= 1.0.0)
+    grape-entity (0.4.8)
+      activesupport
+      multi_json (>= 1.3.2)
+    grape-kaminari (0.1.8)
+      grape
+      kaminari
+    grape-swagger (0.10.2)
+      grape (>= 0.8.0)
+      grape-entity
+    grape-swagger-rails (0.1.0)
+      grape-swagger (>= 0.7.2)
+      railties (>= 3.2.12)
     haml (4.1.0.beta.1)
       tilt
     haml-rails (0.9.0)
@@ -144,6 +159,7 @@ GEM
       haml (>= 4.0.6, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
+    hashie (3.4.2)
     hpricot (0.8.6)
     html2haml (1.0.1)
       erubis (~> 2.7.0)
@@ -151,6 +167,7 @@ GEM
       hpricot (~> 0.8.6)
       ruby_parser (~> 3.1.1)
     i18n (0.7.0)
+    ice_nine (0.11.1)
     jquery-rails (4.0.4)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -176,6 +193,8 @@ GEM
     mini_magick (4.2.10)
     mini_portile (0.6.2)
     minitest (5.8.0)
+    multi_json (1.11.2)
+    multi_xml (0.5.5)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
@@ -208,6 +227,10 @@ GEM
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
+    rack-accept (0.4.5)
+      rack (>= 0.4)
+    rack-mount (0.8.3)
+      rack (>= 1.0.0)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
@@ -318,6 +341,11 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    virtus (1.0.5)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
     warden (1.2.3)
       rack (>= 1.0)
     yard (0.8.7.6)
@@ -340,9 +368,12 @@ DEPENDENCIES
   cells-haml!
   coffee-rails (~> 4.1.0)
   devise
-  ember-data-source
-  ember-rails
-  ember-source
+  ember-cli-rails
+  faker
+  grape
+  grape-entity
+  grape-kaminari
+  grape-swagger-rails
   haml-rails
   jquery-rails
   kaminari

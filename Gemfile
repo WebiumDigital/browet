@@ -58,9 +58,7 @@ gem 'jquery-rails'
 # gem 'role-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'ember-rails'
-gem 'ember-source'
-gem 'ember-data-source'
+gem "ember-cli-rails"
 
 # Css
 gem 'bootstrap-sass', '~> 3.2.0'
@@ -82,10 +80,11 @@ gem 'devise'
 # gem 'whenever', :require => false
 
 # Api
-# gem 'grape', github: 'intridea/grape'
+gem 'grape'
 # gem 'grape-cors', github: 'cambridge-healthcare/grape-cors'
-# gem 'grape-swagger-rails'
-# gem 'grape-entity'
+gem 'grape-swagger-rails'
+gem 'grape-entity'
+gem 'grape-kaminari'
 # gem 'jbuilder', '~> 2.0'
 
 # Money
@@ -119,6 +118,7 @@ gem 'devise'
 gem 'puma'
 
 # Usefull Stuff
+gem 'faker'
 # gem 'tinymce-rails'
 # gem "jquery-fileupload-rails"
 # gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
