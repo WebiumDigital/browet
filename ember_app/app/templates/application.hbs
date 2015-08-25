@@ -1,3 +1,30 @@
-{{#link-to 'about'}}About{{/link-to}}
-{{#link-to 'products'}}Products{{/link-to}}
-{{outlet}}
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      {{#link-to 'index' classNames='navbar-brand'}}
+        Home
+      {{/link-to}}
+      {{#link-to 'about' classNames='navbar-brand'}}
+        About
+      {{/link-to}}
+    </div>
+    <ul class="nav navbar-nav navbar-left">
+
+      {{#link-to 'products' tagName='li'}}
+        <a>Products</a>
+      {{/link-to}}
+
+      {{#link-to 'protected' tagName='li'}}
+        <a>Protected Page</a>
+      {{/link-to}}
+
+      {{#link-to 'auth-error' tagName='li'}}
+        <a>Auth Error Page</a>
+      {{/link-to}}
+    </ul>
+    {{login-logout-button login='transitionToLoginRoute'}}
+  </div>
+</nav>
+<div class="container">
+  {{outlet}}
+</div>

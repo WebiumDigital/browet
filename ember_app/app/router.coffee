@@ -5,6 +5,10 @@ Router = Ember.Router.extend
   location: config.locationType
 
 Router.map ->
+  @route 'login'
+  @route 'protected'
+  @route 'auth-error'
+
   @route 'about'
   @route 'products'
 

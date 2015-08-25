@@ -1,10 +1,14 @@
-`import Ember from 'ember'`
+`import ProtectedRoute from 'browet/routes/protected'`
 `import RouteMixin from 'ember-cli-pagination/remote/route-mixin'`
 
-ProductsRoute = Ember.Route.extend(RouteMixin,
-  perPage: 10,
-  model: (params) ->
-    @findPaged('product',params)
+ProductsRoute = ProtectedRoute.extend(
+  RouteMixin,
+  {
+    perPage: 10
+    model: (params) ->
+      @findPaged('product', params)
+  }
 )
+
 
 `export default ProductsRoute`

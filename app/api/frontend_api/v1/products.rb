@@ -1,4 +1,4 @@
-class FrontendApi::V1::Products < Grape::API
+class FrontendApi::V1::Products < FrontendApi::V1::Authorized
   namespace :products do
     desc 'Return all products'
     params do

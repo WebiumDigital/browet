@@ -118,6 +118,8 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    doorkeeper (3.0.0)
+      railties (>= 3.2)
     ember-cli-rails (0.3.5)
       railties (>= 3.1, < 5)
       sprockets (>= 2.0)
@@ -368,6 +370,7 @@ DEPENDENCIES
   cells-haml!
   coffee-rails (~> 4.1.0)
   devise
+  doorkeeper
   ember-cli-rails
   faker
   grape
