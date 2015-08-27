@@ -1,7 +1,7 @@
 {{! display logout button when the session is authenticated, login button otherwise }}
 {{#if session.isAuthenticated}}
-  <a {{action 'logout'}} class="btn btn-danger navbar-btn navbar-right">Logout</a>
-  <p class="navbar-text pull-right">Signed in as {{sessionAccount.accountName}}</p>
+  <a {{action 'logout'}} class="btn btn-danger navbar-btn navbar-right">{{t 'login_logout_button.logout'}}</a>
+  <p class="navbar-text pull-right">{{t 'login_logout_button.signed_as' signed_as=sessionAccount.accountName}}</p>
 {{else}}
-  <a {{action 'login'}} class="btn btn-success navbar-btn navbar-right">Login</a>
+  <a {{action 'login'}} class="btn btn-success navbar-btn navbar-right">{{t 'login_logout_button.login'}}</a>
 {{/if}}

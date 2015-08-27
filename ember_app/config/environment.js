@@ -30,6 +30,10 @@ module.exports = function(environment) {
     authorizer: 'simple-auth-authorizer:oauth2'
   };
 
+  ENV.i18n = {
+    defaultLocale: 'ru'
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
