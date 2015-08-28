@@ -10,6 +10,7 @@ Router.map ->
   @route 'auth-error'
 
   @route 'about'
-  @route 'products'
+  @route 'products', ->
+    @route 'new'
 
 `export default Router`

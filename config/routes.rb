@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   mount FrontendApi::Root => '/'
   mount GrapeSwaggerRails::Engine => '/swagger'
-  get ':path' => 'welcome#index'
+  get '*path' => 'welcome#index'
 
   # devise_for :users, controllers: { sessions: 'sessions' }
 
