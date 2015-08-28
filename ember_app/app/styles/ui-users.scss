@@ -1,0 +1,32 @@
+.bro.table{
+
+  .head.users, .row.users{
+    .email{
+      width: 190px;
+    }
+    .role{
+      width: 160px;
+    }
+  }
+
+  .row.users{
+    cursor: pointer;
+    background:#F7F7F7;
+    margin-bottom: 4px;
+    -moz-box-shadow:    0px 1px 4px 0px rgba(0,0,0,0.11);
+    box-shadow:         0px 1px 4px 0px rgba(0,0,0,0.11);
+
+    &:hover{
+      -moz-box-shadow:    0px 1px 4px 0px rgba(0,0,0,0.11), inset 0px 0px 0px 2px #2392D0;
+      box-shadow:         0px 1px 4px 0px rgba(0,0,0,0.11), inset 0px 0px 0px 2px #2392D0;
+    }
+
+    &.current-user {
+      background: #27D471;
+    }
+
+  }
+
+  
+
+}

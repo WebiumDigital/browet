@@ -1,0 +1,210 @@
+/*
+* CSS TOGGLE SWITCHES
+* Unlicense
+*
+* Ionuț Colceriu - ghinda.net
+* https://github.com/ghinda/css-toggle-switch
+*/
+
+@media only screen {
+  /*
+  Checkbox switch
+  */
+  .switch-light {
+    display: block;
+    min-height: 1.875em;
+    position: relative;
+    overflow: visible;
+    padding: 0;
+    margin-left: 6.25em;
+
+  }
+  .switch-light * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .switch-light a {
+    display: block;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+  .switch-light label, .switch-light > span {
+    line-height: 1.875em;
+    vertical-align: middle; }
+  .switch-light input:focus ~ a, .switch-light input:focus + label {
+    outline: 1px dotted #888; }
+  .switch-light label {
+    position: relative;
+    z-index: 3;
+    display: block;
+    width: 100%; }
+  .switch-light input {
+    position: absolute;
+    opacity: 0;
+    z-index: 5; }
+  .switch-light input:checked ~ a {
+    right: 0%; }
+  .switch-light > span {
+    position: absolute;
+    left: -6.25em;
+    width: 100%;
+    margin: 0;
+    padding-right: 6.25em;
+    text-align: left; }
+  .switch-light > span span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: block;
+    width: 50%;
+    margin-left: 6.25em;
+    text-align: center; }
+  .switch-light > span span:last-child {
+    left: 50%; }
+  .switch-light a {
+    position: absolute;
+    right: 50%;
+    top: 0;
+    z-index: 4;
+    display: block;
+    width: 50%;
+    height: 100%;
+    padding: 0; }
+
+
+    /* Radio switch
+    */
+    .switch-toggle {
+      display: block;
+      min-height: 1.875em;
+      position: relative;
+      display: table;
+      table-layout: fixed;
+      padding: 0;
+      height: 100%;
+    }
+    .switch-toggle * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+    .switch-toggle a {
+      display: block;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out; }
+    .switch-toggle label, .switch-toggle > span {
+      line-height: 1.875em;
+      vertical-align: middle;
+      cursor: pointer;}
+    .switch-toggle * {
+      font-size: 85%; }
+    .switch-toggle input {
+      width: auto !important;
+      position: absolute;
+      opacity: 0; }
+    .switch-toggle input + label {
+      position: relative;
+      z-index: 2;
+      display: table-cell;
+      width: 50%;
+      padding: 0 0.5em;
+      margin: 0;
+      text-align: center; }
+    .switch-toggle a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0;
+      z-index: 1;
+      width: 50%;
+      height: 100%; }
+    .switch-toggle input:last-of-type:checked ~ a {
+      left: 50%; }
+
+    .switch-toggle.switch-3 label, .switch-toggle.switch-3 a {
+      width: 33.3333333333% }
+    .switch-toggle.switch-3 input:checked:nth-of-type(2) ~ a {
+      left: 33.3333333333%; }
+    .switch-toggle.switch-3 input:checked:last-of-type ~ a {
+      left: 66.6666666667%; }
+
+    .switch-toggle.switch-4 label, .switch-toggle.switch-4 a {
+      width: 25%; }
+    .switch-toggle.switch-4 input:checked:nth-of-type(2) ~ a {
+      left: 25%; }
+    .switch-toggle.switch-4 input:checked:nth-of-type(3) ~ a {
+      left: 50%; }
+    .switch-toggle.switch-4 input:checked:last-of-type ~ a {
+      left: 75%; }
+
+    .switch-toggle.switch-5 label, .switch-toggle.switch-5 a {
+      width: 20%; }
+    .switch-toggle.switch-5 input:checked:nth-of-type(2) ~ a {
+      left: 20%; }
+    .switch-toggle.switch-5 input:checked:nth-of-type(3) ~ a {
+      left: 40%; }
+    .switch-toggle.switch-5 input:checked:nth-of-type(4) ~ a {
+      left: 60%; }
+    .switch-toggle.switch-5 input:checked:last-of-type ~ a {
+      left: 80%; }
+
+
+  /* Browet Theme
+  */
+  .switch-browet {
+    background-color: #FAFAFA;
+    border-radius: 1px;
+    color: #969696;
+    border:solid 1px #E6E3E3;
+    margin-left: 0px;
+  }
+  .switch-browet label {
+    color: #969696; }
+  .switch-browet > span span {
+    cursor: pointer;
+    opacity: 0;
+    margin-left: 7.1875em;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;}
+  .switch-browet > span span:first-of-type {
+    opacity: 1; }
+  .switch-browet > span span, .switch-browet input + label {
+    font-size: 85%;}
+  .switch-browet a {
+    cursor: pointer;
+    background-color: #E2E2E2;
+    border-radius: 1px;}
+  .switch-browet.switch-light input:checked ~ a {
+    background-color: #2392D0;}
+  .switch-browet.switch-light input:checked ~ span span:first-of-type {
+    opacity: 0;}
+  .switch-browet.switch-light input:checked ~ span span:last-of-type {
+    opacity: 1;
+    color:#fff}
+  .switch-browet.switch-toggle input:checked ~ a {
+    background-color: #2392D0;}
+
+  .switch-browet.switch-toggle input:checked + label {
+    color: #fff;
+  }
+  .switch-browet.switch-toggle, .switch-browet > span span {
+    text-transform: uppercase;}
+}
+
+
+
+/* Bugfix for older Webkit, including mobile Webkit. Adapted from
+* http://css-tricks.com/webkit-sibling-bug/
+*/
+@media only screen and (-webkit-max-device-pixel-ratio: 2) and (max-device-width: 80em) {
+  .switch-light, .switch-toggle {
+    -webkit-animation: webkitSiblingBugfix infinite 1s; } }
+
+@-webkit-keyframes webkitSiblingBugfix {
+  from {
+    -webkit-transform: translate3d(0, 0, 0); }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0); } }

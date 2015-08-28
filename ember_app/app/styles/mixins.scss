@@ -1,0 +1,76 @@
+//Custom clear fix
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+//Responsive Mixins
+$ipad-landscape: 980px;
+$small: 320px;
+$large: 1980px;
+
+@mixin apply-to($ltgt, $device) {
+  $extrema: null;
+  @if $ltgt == less-than {
+    $extrema: max;
+  }
+  @if $ltgt == greater-than {
+    $extrema: min;
+  }
+  @if $device == $ipad-landscape {
+    @media only screen and (#{$extrema}-width: $ipad-landscape) {
+      @content;
+    }
+  }
+
+  @if $device == $large {
+    @media only screen and (#{$extrema}-width: $large) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $small + 1) and (max-width: $large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $large) { @content; }
+  }
+}
+
+// FIXME: Assset urls!
+
+@mixin background-image-png-svg-retina($url, $w:false, $h:false){
+    background-image: url('#{$url}.svg');
+    @if($w and $h){
+        background-size: $w $h;
+    }
+    .no-svg &{
+        background-image: url('#{$url}.png');
+
+        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+          background-image: url('#{$url}@2x.png');
+        }
+    }
+}
+
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

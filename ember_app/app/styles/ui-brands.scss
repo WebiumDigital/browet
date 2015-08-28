@@ -1,0 +1,19 @@
+.bro.table{
+
+  .head.brands, .row.brands{
+    .extra{
+      width: 120px;
+    }
+    .code{
+      width: 120px;
+    }
+  }
+
+  .row.brands{
+    background:#F7F7F7;
+    margin-bottom: 4px;
+    -moz-box-shadow:    0px 1px 4px 0px rgba(0,0,0,0.11);
+    box-shadow:         0px 1px 4px 0px rgba(0,0,0,0.11);
+  }
+
+}

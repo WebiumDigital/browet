@@ -1,0 +1,86 @@
+.bro.table{
+
+  .head.product, .row.product{
+    .mpn{
+      width:150px;
+    }
+
+    .prices{
+      width:150px;
+    }
+
+    .availability{
+      @extend .noselect;
+      width:150px;
+    }
+
+    .extra{
+      @extend .noselect;
+      width:90px;
+    }
+  }
+
+  .row.product{
+    cursor: pointer;
+    min-height: 70px;
+    background:#F7F7F7;
+    margin-bottom: 4px;
+    -moz-box-shadow:    0px 1px 4px 0px rgba(0,0,0,0.11);
+    box-shadow:         0px 1px 4px 0px rgba(0,0,0,0.11);
+
+    &:hover{
+      -moz-box-shadow:    0px 1px 4px 0px rgba(0,0,0,0.11), inset 0px 0px 0px 2px #2392D0;
+      box-shadow:         0px 1px 4px 0px rgba(0,0,0,0.11), inset 0px 0px 0px 2px #2392D0;
+    }
+
+    .mpn{
+      letter-spacing: 0.4px;
+
+      .mpn-line{
+        color:#242627;
+        font-weight: 600;
+        font-size: 12px;
+      }
+    }
+
+    .title{
+      letter-spacing: 0.4px;
+
+      .title-line{
+        display:table;
+        width: 100%;
+
+        .name{
+          display:table-cell;
+          font-weight: 600;
+          font-size: 12px;
+          color: #242627;
+        }
+
+        .brand{
+          display:table-cell;
+          width: 100px;
+          text-align:right;
+          font-weight: normal;
+          font-size: 11px;
+          color: #242627;
+        }
+      }
+
+      .description-line{
+        font-weight: 300;
+        font-size: 11px;
+        color: #575757;
+        line-height: 15px;
+      }
+    }
+
+    .extra{
+      vertical-align: middle;
+      text-align: center;
+    }
+
+  }
+
+
+}

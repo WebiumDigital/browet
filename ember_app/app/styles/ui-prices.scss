@@ -1,0 +1,90 @@
+
+.bro.table{
+  .head.prices{
+    .price{
+      width:150px;
+    }
+
+    .sate{
+      @extend .noselect;
+      width:150px;
+    }
+
+    .action{
+      @extend .noselect;
+      width:90px;
+    }
+  }
+
+
+  .row.prices{
+    background: #EDEDED;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.11);
+    margin-bottom: 7px;
+
+    .product-line{
+      display:table;
+      width: 100%;
+      min-height: 34px;
+
+      .title{
+        width: 70%;
+
+        a{
+          font-size: 12px;
+          font-weight: 600;
+          color: #5E5E5E;
+          letter-spacing: 0.5px;
+          line-height: 15px;
+          text-decoration: none;
+
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .sku{
+        text-align: right;
+        font-weight: 300;
+        font-size: 11px;
+        color: #5E5E5E;
+        letter-spacing: 0.46px;
+        line-height: 15px;
+        padding-right: 21px;
+      }
+
+    }
+
+    .price-line{
+      display:table;
+      width: 100%;
+      background: #F7F7F7;
+      .current-price{
+        width: 30%;
+      }
+    }
+
+    .action.cell{
+      text-align: right;
+
+      .message{
+        color: #2392D0;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.46px;
+      }
+    }
+
+    .allprice-line{
+      display:table;
+      width: 100%;
+    }
+
+    .button.reject{
+      margin-right: 7px;
+    }
+
+
+  }
+}
