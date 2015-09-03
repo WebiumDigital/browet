@@ -1,11 +1,22 @@
+
+
+unless User.any?
+  User.create(email:'test@test.ru', password:'testtest', password_confirmation: 'testtest')
+end
+
+unless Shop.any?
+  Shop.create(name: 'testshop')
+end
+
+unless ShopToUser.any?
+  ShopToUser.create(shop: Shop.last, user: User.last)
+end
+
+Apartment::Tenant.switch!(Shop.last.database)
 unless Product.any?
   Product.create(
     (0..50).to_a.map{|x|
       {title: Faker::Commerce.product_name}
     }
   )
-end
-
-unless User.any?
-  User.create(email:'test@test.ru', password:'testtest', password_confirmation: 'testtest')
 end

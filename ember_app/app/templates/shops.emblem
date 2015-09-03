@@ -1,0 +1,7 @@
+.account.bro.choose
+  .space
+    h2.ui.center.aligned.header.dark Выбор аккаунта
+    | {{#each model as |shop|}}
+        <a class=item href="{{shop.link}}">{{shop.name}}</a>
+
+    | {{/each}}

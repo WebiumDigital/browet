@@ -7,6 +7,7 @@ gem 'pg'
 gem 'squeel'
 # gem 'counter_culture', '~> 0.1.23'
 # gem 'friendly_id', '~> 5.0.0'
+gem 'apartment'
 
 # Config
 gem 'settingslogic'
@@ -86,6 +87,7 @@ gem 'grape'
 gem 'grape-swagger-rails'
 gem 'grape-entity'
 gem 'grape-kaminari'
+gem 'rack-cors'
 # gem 'jbuilder', '~> 2.0'
 
 # Money

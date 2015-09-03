@@ -1,0 +1,21 @@
+.authform
+  .ui.form.segment
+    h1.ui.center.aligned.header.white Вход в Browet
+    form#new_user.new_user submit="authenticate"
+      .ui.error.message
+        .header Action Forbidden
+        p
+      .field
+        .ui.left.icon.input
+          = input value=identification id="user_email" autofocus="autofocus" placeholder="Email" type="email"
+          i.users.icon
+      .field
+        .ui.left.icon.input.password
+          = input value=password id="user_password" autocomplete="off" placeholder="Пароль" type="password"
+          i.lock.icon
+          a.link-input href="/users/password/new"  Забыли?
+      .fields
+        .field
+          input.ui.green.submit.button.submitbox name="commit" type="submit" value="Войти" /
+        .field
+          a.ui.basic.submit.button.signupbox href="/users/sign_up"  Регистрация

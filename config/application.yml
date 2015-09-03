@@ -1,9 +1,12 @@
 defaults: &defaults
-  app:
+  app: &app
     title: Browet
 
 development:
   <<: *defaults
+  app:
+    <<: *app
+    host: browet.local:4200
 
 
 test:
@@ -12,6 +15,9 @@ test:
 
 production:
   <<: *defaults
+  app:
+    <<: *app
+    host: browet.ru
 
 
 staging:

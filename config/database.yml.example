@@ -1,19 +1,18 @@
-development:
+defaults: &defaults
   adapter: postgresql
   encoding: unicode
-  database: browet_development
   pool: 5
+  schema_search_path: "public,shared_extensions"
+
+development:
+  <<: *defaults
+  database: browet_development
+
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  database: browet_test
-  pool: 5
+  <<: *defaults
+  database: browet_test  
 
 production:
-  adapter: postgresql
-  encoding: unicode
+  <<: *defaults
   database: browet_production
-  pool: 5
-  username:
-  password:

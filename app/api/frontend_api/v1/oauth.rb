@@ -1,4 +1,5 @@
 class FrontendApi::V1::Oauth < Grape::API
+
   namespace :oauth do
     desc 'Returns token'
     params do
@@ -14,4 +15,5 @@ class FrontendApi::V1::Oauth < Grape::API
       end
     end
   end
+
 end

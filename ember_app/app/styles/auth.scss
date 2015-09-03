@@ -1,0 +1,47 @@
+.auth_container{
+  width:100%;
+  height: auto;
+  background: #12222C;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+}
+
+header{
+  width: 96%;
+  padding: 20px 2% 20px 2%;
+  height: 26px;
+  top:0px;
+  //position: fixed;
+  @include clearfix;
+
+  .logotype{
+    float:left;
+    width: 95px;
+    height: 26px;
+  }
+
+  nav{
+    float:right;
+
+    a{
+      font-weight: 300;
+      font-size: 14px;
+      color: #EBEBEB;
+      line-height: 19px;
+      text-decoration: none;
+    }
+  }
+}
+
+.authform{
+  width:280px;
+  height:300px;
+  margin: 16% auto 0px auto;
+}
+
+.account{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  margin-left: -160px;
+}

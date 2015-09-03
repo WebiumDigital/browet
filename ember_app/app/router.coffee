@@ -5,12 +5,17 @@ Router = Ember.Router.extend
   location: config.locationType
 
 Router.map ->
+  @route 'accounts'
   @route 'login'
+
+  @route 'dashboard'
+  @route 'products'
+
   @route 'protected'
   @route 'auth-error'
 
   @route 'about'
-  @route 'products', ->
-    @route 'new'
+
+  @route 'shops'
 
 `export default Router`

@@ -1,19 +1,2 @@
-nav.navbar.navbar-default.navbar-fixed-top
-  .container-fluid
-    .navbar-header
-      link-to 'index' classNames='navbar-brand'
-        = t 'main_menu.home'
-
-    ul.nav.navbar-nav.navbar-left
-      link-to 'products.index' tagName='li'
-        a
-          = t 'main_menu.products'
-      link-to 'protected' tagName='li'
-        | <a>Protected Page</a>
-      link-to 'auth-error' tagName='li'
-        | <a>Auth Error Page</a>
-
-    ==login-logout-button login='transitionToLoginRoute'
-
-.container
-  ==outlet
+=login-logout-button
+==outlet
