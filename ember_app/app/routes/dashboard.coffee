@@ -2,8 +2,10 @@
 
 DashboardRoute = ProtectedRoute.extend(
   {
-#    model: ->
-#      @findAll('dashboard')
+    model: ->
+      @store.findAll('dashboard')
+        .then (records)->
+          records.get('firstObject')
   }
 )
 

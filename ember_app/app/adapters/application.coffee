@@ -5,9 +5,11 @@
 ApplicationAdapter = ActiveModelAdapter.extend(
   DataAdapterMixin,
   {
-    host: config.apiHost
-    namespace: 'api/frontend'
+    host: config.api.host
+    namespace: config.api.namespace
     authorizer: 'authorizer:application'
+    headers:
+      'Shop-Domain': window.location.hostname.split('.')[0]
   }
 )
 

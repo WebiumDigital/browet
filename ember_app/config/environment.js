@@ -31,6 +31,10 @@ module.exports = function(environment) {
     defaultLocale: 'ru'
   };
 
+  ENV['api'] = {
+    namespace: 'api/frontend'
+  }
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -41,7 +45,7 @@ module.exports = function(environment) {
       serverTokenEndpoint: 'http://browet.local:3000/api/frontend/oauth/token'
     };
     //ENV['ember-simple-auth']['crossOriginWhitelist']=['*'];
-    ENV.apiHost = 'http://browet.local:3000';
+    ENV['api']['host'] = 'http://browet.local:3000';
     //ENV.contentSecurityPolicy = {
     //  'connect-src': "'self' http://browet.local browet.local:3000 browet.local:4200 browet.local:49152 ws://browet.local:49152/livereload",
     //  'script-src': "'self' 'unsafe-eval' browet.local:49152"
