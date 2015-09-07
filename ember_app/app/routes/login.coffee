@@ -2,7 +2,9 @@
 `import UnauthenticatedRouteMixin from 'ember-simple-auth/mixins/unauthenticated-route-mixin'`
 LoginRoute = Ember.Route.extend(UnauthenticatedRouteMixin,
   {
-
+    renderTemplate: (controller, model)->
+      @render('layouts/login', {into: 'application'})
+      @render({into: 'layouts/login'})
   }
 )
 
