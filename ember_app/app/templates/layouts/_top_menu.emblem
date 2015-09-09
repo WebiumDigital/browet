@@ -1,0 +1,13 @@
+.layout.menubar
+  .bro.headmenu
+    .account killme
+    .title
+      span.name Товарные позиции
+      .buttons
+        .notice
+          i
+        .launch
+          .ui.icon.button
+            i.reorder.icon
+    .extension
+      .messages

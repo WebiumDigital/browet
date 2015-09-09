@@ -1,0 +1,22 @@
+.layout.main.container
+  .bro.tabs
+    .repository Хранилище
+    .ui.menu
+      =link-to 'products' class="item" (query-params status="1") | Видимые
+      =link-to 'products' class="item" (query-params status="2") | Скрытые
+      =link-to 'products' class="item" (query-params status="3") | Черновики
+      =link-to 'products' class="item" (query-params status="4") | Архив
+    .filters Фильтры
+  .bro.filters
+
+  .bro.table
+    .head.product
+      .cell.mpn ID
+      .cell Description
+      .cell.prices Prices
+      .cell.availability Availability
+      .cell.extra
+
+    | {{#each model as |product|}}
+      {{partial 'products/product' product}}
+    | {{/each}}

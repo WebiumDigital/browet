@@ -1,0 +1,30 @@
+.row.product
+  .cell.mpn
+    .mpn-line 00213123
+    .gtin-line 234234234
+    .sku-line UN000002
+    .gtin-line 234234234
+  .cell.title
+    .title-line
+      .name
+        = product.title
+      .brand
+        = product.brand
+    .description-line
+      = product.description
+  .cell.prices
+    .price-line
+    .special_price-line
+  .cell.availability
+    .availability-line
+      | availability
+      = product.availability
+    .status-line
+      | status
+      = product.status
+    .updated_at-line
+  .cell.extra
+    .bro.checkbox
+      input#ch1 type="checkbox" value="Тестовый товар"
+      label for="ch1"
+        span.f.fa-check

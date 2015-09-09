@@ -1,10 +1,12 @@
 `import Ember from 'ember'`
 
 ProductsController = Ember.Controller.extend
-  queryParams: ["page"]
-  page: 1
+  status: 1
+  perPage: 10
   pageBinding: Ember.computed.alias("model.page")
-  perPageBinding: Ember.computed.alias("model.perPage")
-  totalPages:  Ember.computed.alias("model.totalPages")
+#  pageBinding: Ember.computed.alias("model.page")
+#  perPageBinding: Ember.computed.alias("model.perPage")
+#  totalPages:  Ember.computed.alias("model.totalPages")
+  page: 1
 
 `export default ProductsController`

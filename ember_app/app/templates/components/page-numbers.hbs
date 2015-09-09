@@ -1,0 +1,46 @@
+<div class="paginationbar bro pagination">
+  <ul class="paginationbar bro pagination">
+    {{#if canStepBackward}}
+      <li class="arrow prev enabled-arrow" {{action "incrementPage" -1}}>
+        <!--<a href="#" {{action "incrementPage" -1}}>&laquo;</a>-->
+        <span>&laquo;</span>
+      </li>
+    {{else}}
+      <li class="arrow prev disabled" {{action "incrementPage" -1}}>
+        <!--<a href="#" {{action "incrementPage" -1}}>&laquo;</a>-->
+        <span>&laquo;</span>
+      </li>
+    {{/if}}
+
+    {{#each pageItems as |item|}}
+      {{#if item.dots}}
+        <li class="dots disabled">
+          <span>...</span>
+        </li>
+      {{/if}}
+      {{#if item.current}}
+        <li class="active page-number">
+          <!--<a href="#">{{item.page}}</a>-->
+          <span>{{item.page}}</span>
+        </li>
+      {{else}}
+        <li class="page-number" {{action "pageClicked" item.page}}>
+          <!--<a href="#" {{action "pageClicked" item.page}}>{{item.page}}</a>-->
+          <span>{{item.page}}</span>
+        </li>
+      {{/if}}
+    {{/each}}
+
+    {{#if canStepForward}}
+      <li class="arrow next enabled-arrow" {{action "incrementPage" 1}}>
+        <!--<a href="#" {{action "incrementPage" 1}}>&raquo;</a>-->
+        <span>&raquo;</span>
+      </li>
+    {{else}}
+      <li class="arrow next disabled" {{action "incrementPage" 1}}>
+        <!--<a href="#" {{action "incrementPage" 1}}>&raquo;</a>-->
+        <span>&raquo;</span>
+      </li>
+    {{/if}}
+  </ul>
+</div>

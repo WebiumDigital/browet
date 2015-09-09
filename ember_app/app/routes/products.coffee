@@ -4,9 +4,17 @@
 ProductsRoute = ProtectedRoute.extend(
   RouteMixin,
   {
-    perPage: 10
+    queryParams:
+      status:
+        refreshModel: true
+
     model: (params) ->
       @findPaged('product', params)
+
+    renderTemplate: ->
+      @render('layouts/application', {into: 'application'})
+      @render('products/index_menu', {into: 'layouts/application', outlet: 'right_menu'})
+      @render({into: 'layouts/application'})
   }
 )
 

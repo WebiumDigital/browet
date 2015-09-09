@@ -1,0 +1,14 @@
+.layout.rightbar.bro.bar
+  .toolsbar.ui.icon.menu.vertical
+    a.item
+      i.fa-search.icon
+    =page-numbers content=model
+  .actionbar.ui.icon.menu.vertical
+    a.item
+      i.icon.fa-save
+    a.item
+      i.icon.fa-edit
+    a.item
+      i.icon.fa-arrow-down
+    a.item
+      i.icon.fa-plus-square-o
