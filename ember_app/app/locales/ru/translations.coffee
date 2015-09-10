@@ -7,6 +7,10 @@ RU_LOCALE = {
     'login': 'Войти'
     'logout': 'Выйти'
   'products':
-    'new': 'Создать'
+    'status_filters':
+      '0': 'Черновики'
+      '1': 'Видимые'
+      '2': 'Скрытые'
+      '3': 'Архив'
 }
 `export default RU_LOCALE`

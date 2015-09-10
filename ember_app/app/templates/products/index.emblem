@@ -1,0 +1,22 @@
+.layout.main.container
+  .bro.tabs
+    .repository Хранилище
+    .ui.menu
+      =link-to 'products' class="item" (query-params status="1") | {{t 'products.status_filters.1'}}
+      =link-to 'products' class="item" (query-params status="2") | {{t 'products.status_filters.2'}}
+      =link-to 'products' class="item" (query-params status="0") | {{t 'products.status_filters.0'}}
+      =link-to 'products' class="item" (query-params status="3") | {{t 'products.status_filters.3'}}
+    .filters Фильтры
+  .bro.filters
+
+  .bro.table
+    .head.product
+      .cell.mpn ID
+      .cell Description
+      .cell.prices Prices
+      .cell.availability Availability
+      .cell.extra
+
+    | {{#each model as |product|}}
+      {{partial 'products/product' product}}
+    | {{/each}}

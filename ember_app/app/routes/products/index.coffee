@@ -1,7 +1,7 @@
 `import ProtectedRoute from 'browet/routes/protected'`
 `import RouteMixin from 'ember-cli-pagination/remote/route-mixin'`
 
-ProductsRoute = ProtectedRoute.extend(
+ProductsIndexRoute = ProtectedRoute.extend(
   RouteMixin,
   {
     queryParams:
@@ -19,4 +19,4 @@ ProductsRoute = ProtectedRoute.extend(
 )
 
 
-`export default ProductsRoute`
+`export default ProductsIndexRoute`

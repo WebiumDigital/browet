@@ -10,7 +10,8 @@ Router.map ->
   @route 'shops'
 
   @route 'dashboard'
-  @route 'products'
+  @route 'products', ->
+    @route 'new'
 
 
 #  @route 'about'
