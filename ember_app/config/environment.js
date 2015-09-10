@@ -21,9 +21,13 @@ module.exports = function(environment) {
 
   ENV['ember-simple-auth'] = {
     base: {
-      store: 'session-store:local-storage'
+      store: 'session-store:cookie'
     },
-    authorizer: 'simple-auth-authorizer:oauth2-bearer'
+    authorizer: 'simple-auth-authorizer:oauth2-bearer',
+    cookie: {
+      name: 'browet:session',
+      expirationTime: (30 * 24 * 60 * 60)
+    }
   };
 
 
@@ -31,9 +35,9 @@ module.exports = function(environment) {
     defaultLocale: 'ru'
   };
 
-  ENV['api'] = {
+  ENV.api = {
     namespace: 'api/frontend'
-  }
+  };
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
@@ -44,8 +48,8 @@ module.exports = function(environment) {
     ENV['ember-simple-auth']['oauth2'] = {
       serverTokenEndpoint: 'http://browet.local:3000/api/frontend/oauth/token'
     };
-    //ENV['ember-simple-auth']['crossOriginWhitelist']=['*'];
-    ENV['api']['host'] = 'http://browet.local:3000';
+    ENV.api.host = 'http://browet.local:3000';
+    ENV['ember-simple-auth'].cookie.domain = '.browet.local';
     //ENV.contentSecurityPolicy = {
     //  'connect-src': "'self' http://browet.local browet.local:3000 browet.local:4200 browet.local:49152 ws://browet.local:49152/livereload",
     //  'script-src': "'self' 'unsafe-eval' browet.local:49152"
