@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150909143622) do
+ActiveRecord::Schema.define(version: 20150910130441) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20150909143622) do
   end
 
   add_index "products", ["slug"], name: "index_products_on_slug", unique: true, using: :btree
+  add_index "products", ["status"], name: "index_products_on_status", using: :btree
 
   create_table "shop_to_users", force: :cascade do |t|
     t.integer  "shop_id",    null: false
