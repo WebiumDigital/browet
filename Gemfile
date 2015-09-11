@@ -16,7 +16,6 @@ gem 'settingslogic'
 # gem 'devise'
 # gem 'switch_user'
 # gem "pundit"
-gem 'doorkeeper'
 
 # Models
 # Validations
