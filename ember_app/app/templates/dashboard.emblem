@@ -1,3 +1,4 @@
-p
-  | Количество товаров:
-  = model.products
+.layout.main.container
+  p
+    | Количество товаров:
+    = model.products
