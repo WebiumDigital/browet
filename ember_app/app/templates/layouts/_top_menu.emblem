@@ -2,7 +2,8 @@
   .bro.headmenu
     .account killme
     .title
-      span.name Товарные позиции
+      span.name
+        = pageTitle
       .buttons
         .notice
           i

@@ -1,4 +1,4 @@
-class FrontendApi::V1::Products < FrontendApi::V1::Authorized
+class FrontendApi::V1::Products < FrontendApi::V1::AuthorizedForShop
   namespace :products do
     desc 'Return all products'
     params do

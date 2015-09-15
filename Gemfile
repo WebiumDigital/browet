@@ -87,6 +87,7 @@ gem 'grape-swagger-rails'
 gem 'grape-entity'
 gem 'grape-kaminari'
 gem 'rack-cors'
+gem 'hashie-forbidden_attributes'
 # gem 'jbuilder', '~> 2.0'
 
 # Money

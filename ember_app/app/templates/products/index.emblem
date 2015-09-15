@@ -17,6 +17,5 @@
       .cell.availability Availability
       .cell.extra
 
-    | {{#each model as |product|}}
-      {{partial 'products/product' product}}
-    | {{/each}}
+    =each model as |product|
+      =partial 'products/product'

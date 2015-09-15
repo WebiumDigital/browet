@@ -14,5 +14,4 @@ class FrontendApi::V1::Root < Grape::API
 
   mount FrontendApi::V1::Public
   mount FrontendApi::V1::Authorized
-  mount FrontendApi::V1::AuthorizedForShop
 end

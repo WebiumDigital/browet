@@ -14,6 +14,9 @@ Router.map(function() {
   this.route('products', function() {
     this.route('new');
   });
+  this.route('collections', function() {
+    this.route('new');
+  });
 
 });
 
