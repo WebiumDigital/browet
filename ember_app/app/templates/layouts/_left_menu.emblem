@@ -1,4 +1,4 @@
-.layout.leftbar.bro.bar
+.app-layout-leftbar
   .accountbar.ui.icon.menu.vertical
     a.item.bro.logotype.blue-icon href="/home"
       i.icon

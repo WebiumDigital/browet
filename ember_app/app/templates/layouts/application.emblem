@@ -1,4 +1,5 @@
-= partial 'layouts/left_menu'
-== outlet 'right_menu'
-= partial 'layouts/top_menu'
-== outlet
+.app-container
+  = partial 'layouts/left_menu'
+  == outlet 'right_menu'
+  = partial 'layouts/top_menu'
+  == outlet
