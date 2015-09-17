@@ -129,6 +129,7 @@ gem 'faker'
 # gem 'x-editable-rails'
 # gem 'select2-rails'
 # gem 'rubylight', :git=>'git://github.com/azfire/rubylight.git'
+gem "non-stupid-digest-assets"
 
 group :development do
   # Pry stuff
