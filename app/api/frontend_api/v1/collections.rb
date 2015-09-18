@@ -8,7 +8,9 @@ class FrontendApi::V1::Collections < FrontendApi::V1::AuthorizedForShop
 
     desc 'Create a collection'
     params do
-      optional :title, type: String, desc: 'Title'
+      requires :collection, :type=>Hash do
+        requires :title, type: String
+      end
     end
     post do
       collection = Collection.new(params[:collection])
