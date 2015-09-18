@@ -4,9 +4,8 @@ export default Ember.Controller.extend({
   pageTitle: 'Коллекции',
   actions: {
     create() {
-      var self = this;
-      this.get('model').save().then(function() {
-        self.transitionToRoute('collections.index');
+      this.get('model').save().then(() => {
+        this.transitionToRoute('collections.index');
       });
     }
   }
