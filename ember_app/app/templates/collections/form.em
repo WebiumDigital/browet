@@ -1,5 +1,5 @@
 .layout.main.container
-  form submit="create"
+  form submit="save"
     .field
       |{{#each model.errors.title as |error|}}
       |  <div class="error">

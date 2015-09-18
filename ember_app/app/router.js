@@ -16,6 +16,7 @@ Router.map(function() {
   });
   this.route('collections', function() {
     this.route('new');
+    this.route('edit', {path: '/:id'});
   });
 
 });

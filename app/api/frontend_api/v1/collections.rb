@@ -20,5 +20,31 @@ class FrontendApi::V1::Collections < FrontendApi::V1::AuthorizedForShop
         resource_error_response(collection)
       end
     end
+
+    desc 'Get a collection'
+    params do
+      requires :id, type: Integer
+    end
+    get '/:id' do
+      collection = Collection.find(params[:id])
+      present collection, with: FrontendApi::V1::Entities::Collection
+    end
+
+    desc 'Update a collection'
+    params do
+      requires :id, type: Integer
+      requires :collection, :type=>Hash do
+        requires :title, type: String
+      end
+    end
+    put '/:id' do
+      collection = Collection.find(params[:id])
+      collection.attributes = params[:collection]
+      if collection.valid? and collection.save
+        present collection, with: FrontendApi::V1::Entities::Collection
+      else
+        resource_error_response(collection)
+      end
+    end
   end
 end
