@@ -10,4 +10,4 @@
         = input value=model.title
     .fields
       .field
-        input.ui.green.submit.button.submitbox name="commit" type="submit" value="Сохранить" /
+        input.ui.green.submit.button.submitbox name="commit" type="submit" value="{{t 'defaults.actions.save'}}" /
