@@ -25,3 +25,10 @@ unless Product.any?
     }
   )
 end
+
+unless Collection.any?
+  Collection.create([
+    {:title=>'My First Collection'},
+    {:title=>'My Second Collection'}
+  ])
+end
