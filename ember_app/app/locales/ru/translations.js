@@ -19,7 +19,9 @@ export default {
   'defaults': {
     'actions': {
       'edit': 'Редактировать',
-      'save': 'Сохранить'
+      'save': 'Сохранить',
+      'destroy': 'Удалить',
+      'destroy_confirmation': 'Точно удалить?'
     }
   }
 };

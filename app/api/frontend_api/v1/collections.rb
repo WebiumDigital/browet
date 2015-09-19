@@ -46,5 +46,14 @@ class FrontendApi::V1::Collections < FrontendApi::V1::AuthorizedForShop
         resource_error_response(collection)
       end
     end
+
+    desc 'Delete a collection'
+    params do
+      requires :id, type: Integer
+    end
+    delete '/:id' do
+      collection = Collection.find(params[:id])
+      collection.destroy!
+    end
   end
 end
