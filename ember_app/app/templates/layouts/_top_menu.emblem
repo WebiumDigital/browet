@@ -5,10 +5,6 @@
       span.name
         = pageTitle
       .buttons
-        .notice
-          i
-        .launch
-          .ui.icon.button
-            i.reorder.icon
+        = main-menu
     .extension
       .messages

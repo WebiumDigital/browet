@@ -1,7 +1,8 @@
 export default {
   'main_menu': {
+    'collections': 'Коллекции',
     'products': 'Товары',
-    'home': 'Главная'
+    'home': 'Главная',
   },
   'login_logout_button': {
     'signed_as': 'Вы вошли как {{signed_as}}',
