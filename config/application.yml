@@ -22,3 +22,6 @@ production:
 
 staging:
   <<: *defaults
+    app:
+      <<: *app
+      host: browet.ru
