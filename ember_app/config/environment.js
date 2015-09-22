@@ -30,7 +30,6 @@ module.exports = function(environment) {
     }
   };
 
-
   ENV.i18n = {
     defaultLocale: 'ru'
   };
@@ -69,8 +68,13 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV['ember-simple-auth']['oauth2'] = {
+      serverTokenEndpoint: 'http://browet.ru/api/frontend/oauth/token'
+    };
+    ENV.api.host = 'http://browet.ru';
+    ENV['ember-simple-auth'].cookie.domain = '.browet.ru';
   }
+
 
   return ENV;
 };
