@@ -10,6 +10,8 @@ if isShowingModal
         a click="toggleModal"
           i.icon.close
       .menu
+        = link-to 'menus.index'
+          = t 'main_menu.menus'
         = link-to 'products.index'
           = t 'main_menu.products'
         = link-to 'collections.index'

@@ -3,6 +3,7 @@ export default {
     'collections': 'Коллекции',
     'products': 'Товары',
     'home': 'Главная',
+    'menus': 'Менюхи'
   },
   'login_logout_button': {
     'signed_as': 'Вы вошли как {{signed_as}}',

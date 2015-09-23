@@ -22,6 +22,7 @@ class FrontendApi::V1::AuthorizedForShop < Grape::API
   end
 
   mount FrontendApi::V1::Dashboard
+  mount FrontendApi::V1::Menus
   mount FrontendApi::V1::Products
   mount FrontendApi::V1::Collections
 end

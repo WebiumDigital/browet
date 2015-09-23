@@ -14,11 +14,14 @@ Router.map(function() {
   this.route('products', function() {
     this.route('new');
   });
+  this.route('menus', function() {
+    this.route('new');
+    this.route('edit', {path: '/:id'});
+  });
   this.route('collections', function() {
     this.route('new');
     this.route('edit', {path: '/:id'});
   });
-
 });
 
 
@@ -26,4 +29,4 @@ Router.map(function() {
 //@route 'protected'
 //@route 'auth-error'
 
-export default Router
+export default Router;

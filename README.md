@@ -17,4 +17,13 @@ npm install
 bower install  
 ember server  
 
-Заходить через browet.local:4200  
+Заходить через browet.local:4200
+  
+Todo
+=====
+
+Сделать валидацию параметрво на уровне grape для    
+- Collection  
+- LinkList  
+
+Придумать что делать с вовзращением записи с изменеными пустыми полями(slug) при ошибке записи
