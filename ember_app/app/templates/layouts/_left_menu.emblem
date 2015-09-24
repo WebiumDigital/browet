@@ -1,9 +1,12 @@
-.accountbar.ui.icon.menu.vertical
-  a.item.bro.logotype.blue-icon href="/home"
-    i.icon
-.userbar.ui.icon.menu.vertical
-  a.item href="/users"
-    i.fa-user.icon
-  a.item href="/settings"
-    i.fa-gear.icon
+.app-leftbar__account
+  a.app-leftbar__account-logo href="/home"
+    .app-logo--blue
+
+.app-leftbar__user
+  a.app-sidebar__item href="/users"
+    i.fa.fa-user
+  a.app-sidebar__item href="/settings"
+    i.fa.fa-gear
   = logout-button
+
+
