@@ -7,10 +7,16 @@ module.exports = function(defaults) {
     minifyCSS: {
       enabled: false
     },
+    autoprefixer: {
+      browsers: ['last 2 versions'],
+      cascade: false
+    },
     minifyJS: {
       enabled: false
-    }
+    },
+
   });
+
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
