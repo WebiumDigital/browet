@@ -1,6 +1,6 @@
 tr
   td
-    = collection.title
+    = collection.name
   td
     = link-to 'collections.edit' collection
       = t 'defaults.actions.edit'

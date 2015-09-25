@@ -7,6 +7,6 @@ export default ProtectedApplicationRoute.extend(RouteMixin,{
     status: {refreshModel: true}
   },
   model(params) {
-    return this.findPaged('product', params)
+    return this.findPaged('product', params);
   }
 });

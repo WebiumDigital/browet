@@ -3,9 +3,10 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   beforeModel() {
     var subdomian = window.location.hostname.split('.')[0];
-    if (subdomian == 'browet')
+    if (subdomian === 'browet') {
       this.transitionTo('shops');
-    else
+    } else {
       this.transitionTo('dashboard');
+    }
   }
 });

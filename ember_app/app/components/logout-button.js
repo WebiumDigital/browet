@@ -1,4 +1,4 @@
-import Ember from 'ember'
+import Ember from 'ember';
 
 export default Ember.Component.extend({
   session: Ember.inject.service('session'),
@@ -7,5 +7,4 @@ export default Ember.Component.extend({
       this.get('session').invalidate();
     }
   }
-
-})
+});

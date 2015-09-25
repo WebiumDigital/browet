@@ -28,7 +28,19 @@ end
 
 unless Collection.any?
   Collection.create([
-    {:title=>'My First Collection'},
-    {:title=>'My Second Collection'}
+    {:name=>'My First Collection'},
+    {:name=>'My Second Collection'}
   ])
+end
+
+unless Category.any?
+  Category.create([
+    {name: 'My First Category'},
+    {name: 'My Second Category'}
+  ])
+end
+
+unless CollectionToCategory.any?
+  CollectionToCategory.create(category: Category.first, collection: Collection.first)
+  CollectionToCategory.create(category: Category.first, collection: Collection.last)
 end

@@ -18,6 +18,10 @@ Router.map(function() {
     this.route('new');
     this.route('edit', {path: '/:id'});
   });
+  this.route('categories', function() {
+    this.route('new');
+    this.route('edit', {path: '/:id'});
+  });
   this.route('collections', function() {
     this.route('new');
     this.route('edit', {path: '/:id'});

@@ -1,9 +1,10 @@
 export default {
   'main_menu': {
+    'menus': 'Менюхи',
+    'categories': 'Категории',
     'collections': 'Коллекции',
     'products': 'Товары',
-    'home': 'Главная',
-    'menus': 'Менюхи'
+    'home': 'Главная'
   },
   'login_logout_button': {
     'signed_as': 'Вы вошли как {{signed_as}}',
