@@ -9,7 +9,7 @@ class FrontendApi::V1::Collections < FrontendApi::V1::AuthorizedForShop
     desc 'Create a collection'
     params do
       requires :collection, :type=>Hash do
-        requires :name, type: String
+        requires :title, type: String
       end
     end
     post do
@@ -34,7 +34,7 @@ class FrontendApi::V1::Collections < FrontendApi::V1::AuthorizedForShop
     params do
       requires :id, type: Integer
       requires :collection, :type=>Hash do
-        requires :name, type: String
+        requires :title, type: String
       end
     end
     put '/:id' do

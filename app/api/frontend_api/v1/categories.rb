@@ -41,7 +41,6 @@ class FrontendApi::V1::Categories < FrontendApi::V1::AuthorizedForShop
       end
     end
     put '/:id' do
-      binding.pry
       category = Category.find(params[:id])
       category.attributes = params[:category]
       if category.valid? and category.save
