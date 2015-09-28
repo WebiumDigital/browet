@@ -17,8 +17,11 @@
 
     .menu_items
       =each model.items as |item|
-        = item.item_id
-        = item.item_type
+        .menu_item
+          =ember-selectize content=itemTypes optionValuePath="content" optionLabelPath="content" selection=item.constructor.modelName
+          =ember-selectize content=collections optionValuePath="content" optionLabelPath="content"
+      =each collections as |collection|
+        = collection.name
     .fields
       .field
         input.ui.green.submit.button.submitbox name="commit" type="submit" value="{{t 'defaults.actions.save'}}" /

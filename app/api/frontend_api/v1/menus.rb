@@ -4,6 +4,10 @@ class FrontendApi::V1::Menus < FrontendApi::V1::AuthorizedForShop
     get do
       menus = Menu.all
       present menus, with: FrontendApi::V1::Entities::Menu
+      items = menus.map(&:items).flatten.uniq.map(&:item)
+      present items.find_all{|i| i.is_a?(Category)}, with: FrontendApi::V1::Entities::Category
+      present items.find_all{|i| i.is_a?(Collection)}, with: FrontendApi::V1::Entities::Collection
+      present items.find_all{|i| i.is_a?(Product)}, with: FrontendApi::V1::Entities::Product
     end
 
     desc 'Create a LinkList'
@@ -29,7 +33,10 @@ class FrontendApi::V1::Menus < FrontendApi::V1::AuthorizedForShop
     get '/:id' do
       menu = Menu.find(params[:id])
       present menu, with: FrontendApi::V1::Entities::Menu
-      present menu.items, with: FrontendApi::V1::Entities::MenuItem
+      items = menu.items.map(&:item)
+      present items.find_all{|i| i.is_a?(Category)}, with: FrontendApi::V1::Entities::Category
+      present items.find_all{|i| i.is_a?(Collection)}, with: FrontendApi::V1::Entities::Collection
+      present items.find_all{|i| i.is_a?(Product)}, with: FrontendApi::V1::Entities::Product
     end
 
     desc 'Update a LinkList'

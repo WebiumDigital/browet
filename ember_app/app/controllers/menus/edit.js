@@ -17,5 +17,15 @@ export default Ember.Controller.extend({
       }
     }
   },
+  itemTypes: ['category', 'collection', 'product'],
+  availableCollections: Ember.computed('model.items', function(){
+    return this.store.findAll('collection');
+  }),
+  //collections: Ember.computed.map('model.collections', item => item)
+  //itemCollection: Ember.computed('model.items', function(){
+  //  return this.store.findAll('collection');
+  //})
+  //itemTypes: [{id:'category', name:'category'},{id:'collection', name:'collection'},{id:'product', name:'collection'}]
+
   //items: Ember.computed.map('model.items', item => item)
 });

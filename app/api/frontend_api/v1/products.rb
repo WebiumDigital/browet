@@ -12,5 +12,14 @@ class FrontendApi::V1::Products < FrontendApi::V1::AuthorizedForShop
       present products, with: FrontendApi::V1::Entities::Product
       present products, with: FrontendApi::V1::Entities::PaginatedMeta
     end
+
+    desc 'Get a Product'
+    params do
+      requires :id, type: Integer
+    end
+    get '/:id' do
+      product = Product.find(params[:id])
+      present product, with: FrontendApi::V1::Entities::Product
+    end
   end
 end

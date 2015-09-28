@@ -1,6 +1,7 @@
 import DS from 'ember-data';
+import Linkable from 'browet/models/linkable';
 
-export default DS.Model.extend({
+export default Linkable.extend({
   title: DS.attr('string'),
   description: DS.attr('string'),
   brand: DS.attr('string'),
