@@ -29,6 +29,7 @@ class FrontendApi::V1::Menus < FrontendApi::V1::AuthorizedForShop
     get '/:id' do
       menu = Menu.find(params[:id])
       present menu, with: FrontendApi::V1::Entities::Menu
+      present menu.items, with: FrontendApi::V1::Entities::MenuItem
     end
 
     desc 'Update a LinkList'

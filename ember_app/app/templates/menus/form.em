@@ -14,6 +14,11 @@
           =error.message
       .ui.left.icon.input
         = input value=model.slug
+
+    .menu_items
+      =each model.items as |item|
+        = item.item_id
+        = item.item_type
     .fields
       .field
         input.ui.green.submit.button.submitbox name="commit" type="submit" value="{{t 'defaults.actions.save'}}" /

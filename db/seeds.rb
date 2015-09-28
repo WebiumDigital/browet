@@ -41,6 +41,21 @@ unless Category.any?
 end
 
 unless CollectionToCategory.any?
-  CollectionToCategory.create(category: Category.first, collection: Collection.first)
-  CollectionToCategory.create(category: Category.first, collection: Collection.last)
+  CollectionToCategory.create([
+    {category: Category.first, collection: Collection.first},
+    {category: Category.first, collection: Collection.last}
+  ])
+end
+
+unless Menu.any?
+  Menu.create(name: 'First Menu', slug: 'default')
+  Menu.create(name: 'Second Menu')
+end
+
+unless MenuItem.any?
+  MenuItem.create([
+    {menu: Menu.first, item: Category.first},
+    {menu: Menu.first, item: Collection.first},
+    {menu: Menu.first, item: Product.first}
+  ])
 end

@@ -16,5 +16,6 @@ export default Ember.Controller.extend({
         this.transitionToRoute('menus.index');
       }
     }
-  }
+  },
+  //items: Ember.computed.map('model.items', item => item)
 });
