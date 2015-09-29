@@ -16,6 +16,8 @@
         = input value=model.slug
 
     .menu_items
+      = availableCollections
+      =ember-selectize content=availableCollections optionValuePath="content.id" optionLabelPath="content.name" selection=selection
       =each model.items as |item|
         .menu_item
           =ember-selectize content=itemTypes optionValuePath="content" optionLabelPath="content" selection=item.constructor.modelName

@@ -6,6 +6,6 @@ export default ProtectedApplicationRoute.extend({
   },
   setupController: function(controller, model) {
     controller.set('model', model);
-    controller.set('availableCollections', this.store.findAll('collection'));
+    controller.set('collections', this.store.findAll('collection'));
   }
 });

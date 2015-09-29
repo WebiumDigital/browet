@@ -11,6 +11,7 @@ module.exports = function(defaults) {
       enabled: false
     }
   });
+  app.import('bower_components/select2/select2-bootstrap.css');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

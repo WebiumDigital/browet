@@ -15,9 +15,8 @@
       .ui.left.icon.input
         = input value=model.slug
     .collections
-      =ember-selectize content=availableCollections optionValuePath="content.id" optionLabelPath="content.name" selection=collections placeholder="Select an item" multiple=true
-
-
+      | Categories
+      =select-2 content=collections value=selectedCollections placeholder="Choose your collections" allowClear=true multiple=true optionLabelPath="name"
     .fields
       .field
         input.ui.green.submit.button.submitbox name="commit" type="submit" value="{{t 'defaults.actions.save'}}" /

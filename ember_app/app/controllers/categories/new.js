@@ -4,11 +4,13 @@ export default Ember.Controller.extend({
   pageTitle: 'Категории',
   actions: {
     save() {
-      this.get('model').set('collections', this.get('collections'));
+      this.get('model').set('collections', this.get('selectedCollections'));
       this.get('model').save().then(() => {
         this.transitionToRoute('categories.index');
       });
     }
   },
-  collections: Ember.computed.map('model.collections', item => item)
+  selectedCollections: Ember.computed("model.collections", function() {
+    return this.get("model.collections").map(item => item);
+  })
 });
