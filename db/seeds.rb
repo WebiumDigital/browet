@@ -55,7 +55,6 @@ end
 unless MenuItem.any?
   MenuItem.create([
     {menu: Menu.first, item: Category.first},
-    {menu: Menu.first, item: Collection.first},
-    {menu: Menu.first, item: Product.first}
+    {menu: Menu.first, item: Collection.first}
   ])
 end

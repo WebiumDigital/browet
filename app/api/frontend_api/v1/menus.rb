@@ -4,10 +4,6 @@ class FrontendApi::V1::Menus < FrontendApi::V1::AuthorizedForShop
     get do
       menus = Menu.all
       present menus, with: FrontendApi::V1::Entities::Menu
-      items = menus.map(&:items).flatten.uniq.map(&:item)
-      present items.find_all{|i| i.is_a?(Category)}, with: FrontendApi::V1::Entities::Category
-      present items.find_all{|i| i.is_a?(Collection)}, with: FrontendApi::V1::Entities::Collection
-      present items.find_all{|i| i.is_a?(Product)}, with: FrontendApi::V1::Entities::Product
     end
 
     desc 'Create a LinkList'
@@ -18,6 +14,7 @@ class FrontendApi::V1::Menus < FrontendApi::V1::AuthorizedForShop
       end
     end
     post do
+      params['menu']['menu_items_attributes'] = params['menu'].delete('menu_items')
       menu = Menu.new(params[:menu])
       if menu.valid? and menu.save
         present menu, with: FrontendApi::V1::Entities::Menu
@@ -33,10 +30,9 @@ class FrontendApi::V1::Menus < FrontendApi::V1::AuthorizedForShop
     get '/:id' do
       menu = Menu.find(params[:id])
       present menu, with: FrontendApi::V1::Entities::Menu
-      items = menu.items.map(&:item)
+      items = menu.menu_items.map(&:item).uniq
       present items.find_all{|i| i.is_a?(Category)}, with: FrontendApi::V1::Entities::Category
       present items.find_all{|i| i.is_a?(Collection)}, with: FrontendApi::V1::Entities::Collection
-      present items.find_all{|i| i.is_a?(Product)}, with: FrontendApi::V1::Entities::Product
     end
 
     desc 'Update a LinkList'
@@ -49,6 +45,7 @@ class FrontendApi::V1::Menus < FrontendApi::V1::AuthorizedForShop
     end
     put '/:id' do
       menu = Menu.find(params[:id])
+      params['menu']['menu_items_attributes'] = params['menu'].delete('menu_items')
       menu.attributes = params[:menu]
       if menu.valid? and menu.save
         present menu, with: FrontendApi::V1::Entities::Menu

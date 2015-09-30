@@ -1,6 +1,9 @@
 class FrontendApi::V1::Entities::MenuItem < FrontendApi::V1::Entities::Base
-  expose :item_id, :as=>:id
-  expose :item_type_downcase, :as=>:type
+  root 'menu_items', 'menu_item'
+  expose :id
+
+  expose :item_id
+  expose :item_type_downcase, :as=>:item_type
 
   private
 

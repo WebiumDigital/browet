@@ -6,6 +6,7 @@ export default Ember.Controller.extend({
   actions: {
     save() {
       this.get('model').save().then(() => {
+        this.store.unloadAll('menu_item');
         this.transitionToRoute('menus.index');
       });
     },
@@ -15,17 +16,13 @@ export default Ember.Controller.extend({
         this.get('model').destroyRecord();
         this.transitionToRoute('menus.index');
       }
+    },
+    addMenuItem() {
+      this.store.createRecord('menu_item', {menu: this.get('model'), itemType:'category'});
+    },
+    removeItem(menu_item) {
+      menu_item.destroyRecord();
     }
   },
-  itemTypes: ['category', 'collection', 'product'],
-  //availableCollections: Ember.computed('model.items', function(){
-  //  return this.store.findAll('collection');
-  //}),
-  //collections: Ember.computed.map('model.collections', item => item)
-  //itemCollection: Ember.computed('model.items', function(){
-  //  return this.store.findAll('collection');
-  //})
-  //itemTypes: [{id:'category', name:'category'},{id:'collection', name:'collection'},{id:'product', name:'collection'}]
-
-  //items: Ember.computed.map('model.items', item => item)
+  itemTypes: [{id:'category', text: 'category'}, {id:'collection', text: 'collection'}]
 });

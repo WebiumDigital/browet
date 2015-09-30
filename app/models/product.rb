@@ -8,8 +8,8 @@ class Product < ActiveRecord::Base
   friendly_id :slug_candidates, use: :slugged
   def slug_candidates
     [
-      :title,
-      :title, :created_at
+      :name,
+      [:name, :id]
       # [:sku, :title],
       # [:sku, :title, :created_at]
     ]

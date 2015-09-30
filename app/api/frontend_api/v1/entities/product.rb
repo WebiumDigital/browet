@@ -1,6 +1,6 @@
 class FrontendApi::V1::Entities::Product < FrontendApi::V1::Entities::Base
   root 'products', 'product'
-  expose :id, :title, :description, :brand
+  expose :id, :name, :description, :brand
   expose :status_int, :as=>:status
   expose :availability_int, :as=>:availability
 
