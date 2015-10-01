@@ -17,10 +17,10 @@ unless Product.any?
   Product.create(
     (0..50).to_a.map{|x|
       {
-        title: Faker::Commerce.product_name,
-        :brand=>Faker::Company.name,
-        :description =>Faker::Lorem.sentence(3, false, 4),
-        :status=>rand(4)
+        name: Faker::Commerce.product_name,
+        brand: Faker::Company.name,
+        description: Faker::Lorem.sentence(3, false, 4),
+        status: rand(4)
       }
     }
   )
