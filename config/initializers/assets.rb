@@ -16,4 +16,4 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile << %r(fonts/open_sans/[\w-]+/[\w-]+\.(?:eot|svg|ttf|woff|woff2?)$)
 # Rails.application.config.assets.precompile << %r(fonts/font-awesome/[\w-]+\.(?:eot|svg|ttf|woff|woff2?)$)
 # NonStupidDigestAssets.whitelist += [/tinymce\/.*/, "image.png"]
-NonStupidDigestAssets.whitelist += [/fonts\/.*/]
+NonStupidDigestAssets.whitelist += [/fonts\/.*/, /.*\/close.svg/, /.*\/select2.png/, /.*\/logotype-icon-blue.svg/]
