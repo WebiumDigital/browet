@@ -1,0 +1,80 @@
+html
+  height: 100%
+  min-height: 100%
+  width: 100%
+
+
+body
+  height: 100%
+  min-height: 100%
+  font-family: 'Open Sans', sans-serif
+  font-weight: normal
+  background-color: #D9D9D9
+
+body.locked
+  overflow: hidden
+  position: fixed
+
+.app-leftbar
+  // @extend .bro
+  // @extend .bar
+  position: fixed
+  width: 70px
+  height: 100%
+  min-height: 100%
+
+.app-leftbar__userbar
+    position: absolute
+    left: 0
+    bottom: 0
+    vertical-align: bottom
+    display: block
+
+.layout.rightbar
+  position: fixed
+  width: 70px
+  left: 100%
+  margin-left: -70px
+  height: 100%
+  min-height: 100%
+
+  .actionbar
+    position: absolute
+    left: 0
+    bottom: 0
+    vertical-align: bottom
+    display: block
+
+  .paginationbar
+    margin-top: 60px
+    padding-left: 11px
+
+.layout.menubar
+  margin-left: 70px
+  margin-right: 70px
+  width: auto
+  height: 70px
+  position: relative
+
+.layout.main
+  margin-left: 70px
+  margin-right: 70px
+  width: auto
+  height: 100%
+  position: relative
+
+.layout.categories_content
+  width: 100%
+  display: table
+  margin-top: 6px
+
+  .menu_column
+    width: 300px
+    display: table-cell
+    padding-right: 10px
+    vertical-align: top
+
+  .products_column
+    width: auto
+    display: table-cell
+    vertical-align: top

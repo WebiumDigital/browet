@@ -1,4 +1,4 @@
-.layout.main.container
+.layout.main.container-fluid
   p
     | Количество товаров:
     = model.products

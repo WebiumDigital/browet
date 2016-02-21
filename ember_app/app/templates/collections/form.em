@@ -1,4 +1,4 @@
-.layout.main.container
+.layout.main.container-fluid
   form submit="save"
     .field
       |{{#each model.errors.name as |error|}}

@@ -1,0 +1,22 @@
+$c-gray: #b5c1c7
+$app-sidebar-item-font-size: 20px
+
+.app-leftbar__account
+  order: 1
+
+.app-leftbar__user
+  order: 2
+
+.app-sidebar__item
+  display: flex
+  flex-direction: column
+  justify-content: center
+  height: $app-sidebar-width
+  text-align: center
+  color: $c-gray
+  font-size: $app-sidebar-item-font-size
+  line-height: $app-sidebar-width - $app-sidebar-item-font-size/2
+  border-bottom: 1px solid rgba(#000, 0.1)
+  &, &:focus, &:hover
+    text-decoration: none
+

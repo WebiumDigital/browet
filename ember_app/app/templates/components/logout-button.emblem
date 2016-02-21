@@ -1,2 +1,3 @@
-a.item click='logout'
-  i.fa-sign-out.icon
+a.app-sidebar__item click='logout'
+  i.fa.fa-sign-out
+
